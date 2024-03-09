@@ -29,6 +29,6 @@ public class Main {
         swap(nWrapper,mWrapper);
 
         //System.out.println("swap 실행 후: " + nWrapper.value + " " + mWrapper.value);
-        System.out.println(nWrapper+" "+mWrapper);
+        System.out.println(nWrapper.value+" "+mWrapper.value);
     }
 }
