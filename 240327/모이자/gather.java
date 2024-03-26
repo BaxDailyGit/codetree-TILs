@@ -23,7 +23,7 @@ public class Main {
             meet = i;
             int sumDistance = 0;
             for (int j = 0; j < n; j++){
-                sumDistance += Math.abs((j-meet+1) * a[j]);
+                sumDistance += Math.abs((j-meet) * a[j]);
                 //System.out.println("sumDistance "+sumDistance);
             }
             minSumDistance = Math.min(minSumDistance, sumDistance);
