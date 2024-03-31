@@ -1,106 +1,34 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class Main {
+    public static final int MAX_N = 15;
+
+    public static int n, m;
+    public static char[][] grid = new char[MAX_N][MAX_N];
+    
     public static void main(String[] args) {
-        // 입력
         Scanner sc = new Scanner(System.in);
-        int r = sc.nextInt();
-        int c = sc.nextInt();
-        char[][] arr = new char[r][c];
-        for(int i = 0; i < r; i++)  {
-            for(int j = 0; j < c; j++)  {
-                arr[i][j] = sc.next().charAt(0);
+
+        // 입력
+        n = sc.nextInt();
+        m = sc.nextInt();
+        for(int i = 0; i < n; i++)
+            for(int j = 0; j < m; j++) {
+                grid[i][j] = sc.next().charAt(0);
             }
-        }
 
-        // for(int i = 0; i < r; i++)  {
-        //     for(int j = 0; j < c; j++)  {
-        //         System.out.print(arr[i][j]+" ");
-        //     }
-        //     System.out.println("");
-        // }
-
-        // 완전 탐색
-        // i j k l 사용
-        // i j 는 첫번째 B찾기
-        // k l 는 첫번째 B찾기
-
-        if(arr[0][0]=='W') {
-        // 예외
-        int bCnt = 0;
-        for(int i = 0; i < r; i++)  {
-            for(int j = 0; j < c; j++)  {
-                if(arr[i][j] == 'B'){
-                    bCnt++;
-                }
-            }
-        }
-        if (bCnt > 2) {
-            System.out.println(0);
-        }
-        else {
+        // 이동 시에 행과 열이 전부 증가하도록
+        // 모든 쌍을 다 잡아봅니다.
         int cnt = 0;
-        for(int i = 0; i < r; i++)  {
-            for(int j = 0; j < c; j++)  {
-                if(arr[i][j] == 'B'){
-                    //System.out.print(arr[i][j]+" ");
-                    for(int k = i + 1; k < r - 1; k++)  {
-                        for(int l = j + 1; l < c - 1; l++)  {
-                            cnt ++;
-                            if (arr[k + 1][l + 1] == 'B')   {
-                                break;
-                            }
-                            //System.out.println(k+" "+l);
-                        }
-                    }
-                }
-            }
-        }
-        System.out.println(cnt);
-        }
-        }
-        else {
-        // 예외
-        int wCnt = 0;
-        for(int i = 0; i < r; i++)  {
-            for(int j = 0; j < c; j++)  {
-                if(arr[i][j] == 'W'){
-                    wCnt++;
-                }
-            }
-        }
-        if (wCnt > 2) {
-            System.out.println(0);
-        }
-        else {
-        int cnt = 0;
-        for(int i = 0; i < r; i++)  {
-            for(int j = 0; j < c; j++)  {
-                if(arr[i][j] == 'W'){
-                    //System.out.print(arr[i][j]+" ");
-                    for(int k = i + 1; k < r - 1; k++)  {
-                        for(int l = j + 1; l < c - 1; l++)  {
-                            cnt ++;
-                            if (arr[k + 1][l + 1] == 'W')   {
-                                break;
-                            }
-                            //System.out.println(k+" "+l);
-                        }
-                    }
-                }
-            }
-        }
-        System.out.println(cnt);
-        }
-        }
+        for(int i = 1; i < n; i++)
+            for(int j = 1; j < m; j++)
+                for(int k = i + 1; k < n - 1; k++)
+                    for(int l = j + 1; l < m - 1; l++)
+                        if(grid[0][0] != grid[i][j] && 
+                           grid[i][j] != grid[k][l] &&
+                           grid[k][l] != grid[n - 1][m - 1])
+                            cnt++;
         
-        
-
-
-
-
-
-
-
-
+        System.out.println(cnt);
     }
 }
