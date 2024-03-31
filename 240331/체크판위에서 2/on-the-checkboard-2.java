@@ -23,6 +23,20 @@ public class Main {
         // i j k l 사용
         // i j 는 첫번째 B찾기
         // k l 는 첫번째 B찾기
+
+        // 예외
+        int bCnt = 0;
+        for(int i = 0; i < r; i++)  {
+            for(int j = 0; j < c; j++)  {
+                if(arr[i][j] == 'B'){
+                    bCnt++;
+                }
+            }
+        }
+        if (bCnt > 2) {
+            System.out.println(0);
+        }
+        else {
         int cnt = 0;
         for(int i = 0; i < r; i++)  {
             for(int j = 0; j < c; j++)  {
@@ -41,5 +55,7 @@ public class Main {
             }
         }
         System.out.println(cnt);
+        }
+        
     }
 }
