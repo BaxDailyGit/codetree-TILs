@@ -60,15 +60,15 @@ public class Main {
         }
         else {
         // 예외
-        int bCnt = 0;
+        int wCnt = 0;
         for(int i = 0; i < r; i++)  {
             for(int j = 0; j < c; j++)  {
                 if(arr[i][j] == 'W'){
-                    bCnt++;
+                    wCnt++;
                 }
             }
         }
-        if (bCnt > 2) {
+        if (wCnt > 2) {
             System.out.println(0);
         }
         else {
