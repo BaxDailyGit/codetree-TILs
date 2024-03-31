@@ -30,11 +30,11 @@ public class Main {
                     //System.out.print(arr[i][j]+" ");
                     for(int k = i + 1; k < r - 1; k++)  {
                         for(int l = j + 1; l < c - 1; l++)  {
-                            if (arr[k + 1][l] == 'B')   {
+                            cnt ++;
+                            if (arr[k + 1][l + 1] == 'B')   {
                                 break;
                             }
                             //System.out.println(k+" "+l);
-                            cnt ++;
                         }
                     }
                 }
