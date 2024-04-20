@@ -33,10 +33,10 @@ public class Main {
         // 순회하며 사진을 찍어 얻을 수 있는 최대 점수 찾기        
         int maxSum = 0;
         for(int i = 1; i < max - K + 1; i++) {
-            System.out.println("i: "+i);
+            //System.out.println("i: "+i);
             int sum = 0;
             for(int j = i; j <= i + K; j++) {
-                System.out.println("    placed["+j+"]: "+placed[j]);
+                //System.out.println("    placed["+j+"]: "+placed[j]);
                 sum += placed[j];
             }
             maxSum = Math.max(maxSum, sum);
