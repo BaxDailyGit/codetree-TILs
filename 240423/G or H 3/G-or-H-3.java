@@ -28,6 +28,7 @@ public class Main {
         for(int e : arr){
             maxLocation = Math.max(maxLocation, e);
         }
+        //System.out.println(maxLocation);
 
         // 위치에 해당하는 점수를 가지는 배열 만들기
         int[] placed = new int[maxLocation + 1];
@@ -41,6 +42,14 @@ public class Main {
             }
         }
 
+        if(K > maxLocation) {
+            int sum = 0;
+            for(int i = 1; i < maxLocation + 1; i++) {
+                sum += placed[i];
+                }
+            System.out.println(sum);
+            }
+        else {        
         // 최대 점수를 얻는 크기 찾기
         int maxSum = 0;
         for(int i = 1; i < maxLocation - K + 1; i++) {
@@ -53,5 +62,8 @@ public class Main {
             maxSum = Math.max(maxSum, sum);
         }
         System.out.println(maxSum);
+        }
+
+        
     }
 }
