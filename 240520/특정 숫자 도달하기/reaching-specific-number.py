@@ -8,4 +8,4 @@ for i in range(len(arr)):
         sum_val += arr[i]
     else:
         break
-print(sum_val, sum_val/i)
+print(sum_val, "{:.1f}".format(sum_val/i))
