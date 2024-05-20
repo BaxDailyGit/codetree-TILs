@@ -9,6 +9,3 @@ for i in range(len(arr)):
     else:
         break
 print(sum_val, sum_val/i)
-        
-#     else:
-#         print(sum_val, sum_val/i-1)
