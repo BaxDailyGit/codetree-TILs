@@ -8,4 +8,4 @@ for i in range(len(arr)):
         sum_val += arr[i]
     else:
         break
-print(sum_val, round(sum_val/i, 1))
+print(sum_val, sum_val/i)
