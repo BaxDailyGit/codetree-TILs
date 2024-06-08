@@ -14,7 +14,7 @@ public class Main {
         // 그 구간안에 동일한 원소가 있으면 cnt++
         int cnt = 0;
         for(int i = 0; i < n; i++) {
-            System.out.println("-----------");
+            //System.out.println("-----------");
             for(int j = i; j < n; j++) {
                 double sumEle = 0;
                 double cntEle = 0;
@@ -23,10 +23,10 @@ public class Main {
                     cntEle++;
                 }
                 double avg = sumEle / cntEle;
-                System.out.println(avg + " = " + sumEle + "/" + cntEle);
+                //System.out.println(avg + " = " + sumEle + "/" + cntEle);
                 for(int k = 0; k < n; k++) {
                     if(avg == arr[k]) {
-                        System.out.println("    -->" + avg + " == " + arr[k]);
+                        //System.out.println("    -->" + avg + " == " + arr[k]);
                         cnt++;
                         break;
                     }
