@@ -24,7 +24,7 @@ public class Main {
                 }
                 double avg = sumEle / cntEle;
                 //System.out.println(avg + " = " + sumEle + "/" + cntEle);
-                for(int k = 0; k < n; k++) {
+                for(int k = i; k <= j; k++) {
                     if(avg == arr[k]) {
                         //System.out.println("    -->" + avg + " == " + arr[k]);
                         cnt++;
