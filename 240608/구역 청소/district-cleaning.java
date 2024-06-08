@@ -16,7 +16,7 @@ public class Main {
             arr[i] = 1;
         }
         int sum = 0;
-        for(int i = 1; i < 101; i++) {
+        for(int i = 0; i < 101; i++) {
             sum += arr[i];
         }
         System.out.println(sum);
