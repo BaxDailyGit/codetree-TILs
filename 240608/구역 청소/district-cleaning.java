@@ -9,10 +9,10 @@ public class Main {
         int d = sc.nextInt();
 
         int[] arr = new int[101];
-        for(int i = a; i < b; i++) {
+        for(int i = a+1; i <= b; i++) {
             arr[i] = 1;
         }
-        for(int i = c; i < d; i++) {
+        for(int i = c+1; i <= d; i++) {
             arr[i] = 1;
         }
         int sum = 0;
