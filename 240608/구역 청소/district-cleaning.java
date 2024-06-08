@@ -9,16 +9,16 @@ public class Main {
         int d = sc.nextInt();
 
         int[] arr = new int[101];
-        for(int i = a; i <= b; i++) {
+        for(int i = a; i < b; i++) {
             arr[i] = 1;
         }
-        for(int i = c; i <= d; i++) {
+        for(int i = c; i < d; i++) {
             arr[i] = 1;
         }
         int sum = 0;
         for(int i = 1; i <= 100; i++) {
             sum += arr[i];
         }
-        System.out.println(sum-1);
+        System.out.println(sum);
     }
 }
