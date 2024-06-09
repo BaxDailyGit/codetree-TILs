@@ -55,6 +55,38 @@ public class Main {
         }
 
         // 3.
+        // 셋중에서 가까운 두명을 찾기
+        // 가까운 두명의 거리가 3이하이면 1출력
+        // 가까운 두명의 거리가 3이상이면 2출력
 
+        // 만약 셋 다 거리가 일정하면
+        // 거리가 3이하이면 1출력
+        // 거리가 3이상이면 2출력
+
+        if(list.get(2)-list.get(1) > list.get(1)-list.get(0)) {
+            if(list.get(1)-list.get(0) < 3) {
+                System.out.println(1);
+                return;
+            } else {
+                System.out.println(2);
+                return;
+            }
+        } else if (list.get(2)-list.get(1) < list.get(1)-list.get(0)) {
+            if(list.get(2)-list.get(1) < 3) {
+                System.out.println(1);
+                return;
+            } else {
+                System.out.println(2);
+                return;
+            }
+        } else {
+            if(list.get(1)-list.get(0) < 3) {
+                System.out.println(1);
+                return;
+            } else {
+                System.out.println(2);
+                return;
+            }
+        }
     }
 }
