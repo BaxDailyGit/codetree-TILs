@@ -20,10 +20,10 @@ public class Main {
             }
             
         }
-        if(s.empty() == false) {
-            System.out.println("No");
-        } else {
+        if(s.empty()) {
             System.out.println("Yes");
+        } else {
+            System.out.println("No");
         }
     }
 }
