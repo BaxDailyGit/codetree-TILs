@@ -13,6 +13,10 @@ public class Main {
             if(inputStr.charAt(i) == '(') {
                 s.push(inputStr.charAt(i));
             } else if (inputStr.charAt(i) == ')') {
+                if (s.empty()) {
+                    System.out.println("No");
+                    return;
+                }
                 s.pop();
             } else {
                 System.out.println("No");
