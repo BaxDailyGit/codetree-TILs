@@ -14,8 +14,6 @@ public class Main {
                 s.push(inputStr.charAt(i));
             } else if (inputStr.charAt(i) == ')') {
                 s.pop();
-            } else {
-                System.out.println("No");
             }
             
         }
